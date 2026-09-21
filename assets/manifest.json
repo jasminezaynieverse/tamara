@@ -1,0 +1,2023 @@
+{
+  "signs": [
+    {
+      "id": "1-journey",
+      "name": "journey",
+      "path": "assets/signs/1-journey.png",
+      "size": [
+        196,
+        105
+      ],
+      "crop": [
+        0,
+        0,
+        196,
+        105
+      ],
+      "panel": {
+        "path": "assets/panels/01-journey.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "02-Tamara",
+      "name": "tamara",
+      "path": "assets/signs/02-Tamara.png",
+      "size": [
+        299,
+        233
+      ],
+      "crop": [
+        67,
+        33,
+        233,
+        199
+      ],
+      "panel": {
+        "path": "assets/panels/02-Tamara.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "03-city",
+      "name": "city",
+      "path": "assets/signs/03-city.png",
+      "size": [
+        204,
+        111
+      ],
+      "crop": [
+        0,
+        0,
+        204,
+        107
+      ],
+      "panel": {
+        "path": "assets/panels/03-city.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "04-leads",
+      "name": "leads",
+      "path": "assets/signs/04-leads.png",
+      "size": [
+        306,
+        75
+      ],
+      "crop": [
+        0,
+        0,
+        266,
+        75
+      ],
+      "panel": {
+        "path": "assets/panels/04-leads.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "05-thick",
+      "name": "thick",
+      "path": "assets/signs/05-thick.png",
+      "size": [
+        259,
+        129
+      ],
+      "crop": [
+        0,
+        0,
+        259,
+        129
+      ],
+      "panel": {
+        "path": "assets/panels/05-thick.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "06-penetrate",
+      "name": "penetrate",
+      "path": "assets/signs/06-penetrate.png",
+      "size": [
+        264,
+        134
+      ],
+      "crop": [
+        1,
+        0,
+        264,
+        133
+      ],
+      "panel": {
+        "path": "assets/panels/06-penetrate.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "07-jutting",
+      "name": "jutting",
+      "path": "assets/signs/07-jutting.png",
+      "size": [
+        151,
+        356
+      ],
+      "crop": [
+        0,
+        0,
+        151,
+        277
+      ],
+      "panel": {
+        "path": "assets/panels/07-jutting.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "08-walls",
+      "name": "walls",
+      "path": "assets/signs/08-walls.png",
+      "size": [
+        217,
+        156
+      ],
+      "crop": [
+        0,
+        0,
+        217,
+        156
+      ],
+      "panel": {
+        "path": "assets/panels/08-walls.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "09-street",
+      "name": "street",
+      "path": "assets/signs/09-street.png",
+      "size": [
+        409,
+        97
+      ],
+      "crop": [
+        0,
+        0,
+        409,
+        97
+      ],
+      "panel": {
+        "path": "assets/panels/09-street.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "10-images",
+      "name": "images",
+      "path": "assets/signs/10-images.png",
+      "size": [
+        165,
+        163
+      ],
+      "crop": [
+        0,
+        0,
+        165,
+        163
+      ],
+      "panel": {
+        "path": "assets/panels/10-images.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "11-see",
+      "name": "see",
+      "path": "assets/signs/11-see.png",
+      "size": [
+        118,
+        332
+      ],
+      "crop": [
+        0,
+        19,
+        118,
+        331
+      ],
+      "panel": {
+        "path": "assets/panels/11-see.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "11.5-walls",
+      "name": "walls",
+      "path": "assets/signs/11.5-walls.png",
+      "size": [
+        298,
+        126
+      ],
+      "crop": [
+        0,
+        8,
+        298,
+        110
+      ],
+      "panel": {
+        "path": "assets/panels/08-walls.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "12-scales",
+      "name": "scales",
+      "path": "assets/signs/12-scales.png",
+      "size": [
+        290,
+        70
+      ],
+      "crop": [
+        0,
+        0,
+        290,
+        70
+      ],
+      "panel": {
+        "path": "assets/panels/12-scales.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "13-grocers",
+      "name": "grocers",
+      "path": "assets/signs/13-grocers.png",
+      "size": [
+        278,
+        70
+      ],
+      "crop": [
+        0,
+        0,
+        278,
+        70
+      ],
+      "panel": {
+        "path": "assets/panels/13-grocers.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "14-house",
+      "name": "house",
+      "path": "assets/signs/14-house.png",
+      "size": [
+        164,
+        167
+      ],
+      "crop": [
+        0,
+        0,
+        164,
+        167
+      ],
+      "panel": {
+        "path": "assets/panels/14-house.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "15-barracks",
+      "name": "barracks",
+      "path": "assets/signs/15-barracks.png",
+      "size": [
+        156,
+        156
+      ],
+      "crop": [
+        10,
+        0,
+        146,
+        156
+      ],
+      "panel": {
+        "path": "assets/panels/15-barracks.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "16-tavern",
+      "name": "tavern",
+      "path": "assets/signs/16-tavern.png",
+      "size": [
+        204,
+        77
+      ],
+      "crop": [
+        0,
+        0,
+        204,
+        77
+      ],
+      "panel": {
+        "path": "assets/panels/16-tavern.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "17-tooth",
+      "name": "tooth",
+      "path": "assets/signs/17-tooth.png",
+      "size": [
+        200,
+        54
+      ],
+      "crop": [
+        1,
+        1,
+        198,
+        43
+      ],
+      "panel": {
+        "path": "assets/panels/17-tooth.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "18-pincers",
+      "name": "pincers",
+      "path": "assets/signs/18-pincers.png",
+      "size": [
+        308,
+        72
+      ],
+      "crop": [
+        0,
+        0,
+        308,
+        71
+      ],
+      "panel": {
+        "path": "assets/panels/18-pincers.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "19-tooth-drawers",
+      "name": "tooth-drawers",
+      "path": "assets/signs/19-tooth-drawers.png",
+      "size": [
+        212,
+        102
+      ],
+      "crop": [
+        0,
+        0,
+        212,
+        102
+      ],
+      "panel": {
+        "path": "assets/panels/19-tooth-drawers.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "20-statues",
+      "name": "statues",
+      "path": "assets/signs/20-statues.png",
+      "size": [
+        200,
+        192
+      ],
+      "crop": [
+        21,
+        5,
+        175,
+        188
+      ],
+      "panel": {
+        "path": "assets/panels/20-statues.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "22-depict",
+      "name": "depict",
+      "path": "assets/signs/22-depict.png",
+      "size": [
+        294,
+        131
+      ],
+      "crop": [
+        0,
+        0,
+        294,
+        131
+      ],
+      "panel": {
+        "path": "assets/panels/22-depict.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "23-stars",
+      "name": "stars",
+      "path": "assets/signs/23-stars.png",
+      "size": [
+        136,
+        69
+      ],
+      "crop": [
+        0,
+        0,
+        136,
+        69
+      ],
+      "panel": {
+        "path": "assets/panels/23-stars.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "24-towers",
+      "name": "towers",
+      "path": "assets/signs/24-towers.png",
+      "size": [
+        41,
+        298
+      ],
+      "crop": [
+        0,
+        0,
+        41,
+        298
+      ],
+      "panel": {
+        "path": "assets/panels/24-towers.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "25-dolphins",
+      "name": "dolphins",
+      "path": "assets/signs/25-dolphins.png",
+      "size": [
+        224,
+        112
+      ],
+      "crop": [
+        4,
+        4,
+        220,
+        108
+      ],
+      "panel": {
+        "path": "assets/panels/25-dolphins.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "26-forbidden",
+      "name": "forbidden",
+      "path": "assets/signs/26-forbidden.png",
+      "size": [
+        162,
+        162
+      ],
+      "crop": [
+        0,
+        0,
+        162,
+        162
+      ],
+      "panel": {
+        "path": "assets/panels/26-forbidden.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "27-warn",
+      "name": "warn",
+      "path": "assets/signs/27-warn.png",
+      "size": [
+        195,
+        159
+      ],
+      "crop": [
+        19,
+        0,
+        178,
+        159
+      ],
+      "panel": {
+        "path": "assets/panels/27-warn.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "28-lions",
+      "name": "lions",
+      "path": "assets/signs/28-lions.png",
+      "size": [
+        157,
+        157
+      ],
+      "crop": [
+        0,
+        0,
+        157,
+        157
+      ],
+      "panel": {
+        "path": "assets/panels/28-lions.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "29-relatives",
+      "name": "relatives",
+      "path": "assets/signs/29-relatives.png",
+      "size": [
+        168,
+        166
+      ],
+      "crop": [
+        11,
+        0,
+        157,
+        124
+      ],
+      "panel": {
+        "path": "assets/panels/29-relatives.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "30-wagons",
+      "name": "wagons",
+      "path": "assets/signs/30-wagons.png",
+      "size": [
+        173,
+        51
+      ],
+      "crop": [
+        0,
+        0,
+        173,
+        51
+      ],
+      "panel": {
+        "path": "assets/panels/30-wagons.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "31-bridge",
+      "name": "bridge",
+      "path": "assets/signs/31-bridge.png",
+      "size": [
+        141,
+        83
+      ],
+      "crop": [
+        0,
+        0,
+        141,
+        81
+      ],
+      "panel": {
+        "path": "assets/panels/31-bridge.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "32-playing-bowls",
+      "name": "playing-bowls",
+      "path": "assets/signs/32-playing-bowls.png",
+      "size": [
+        116,
+        96
+      ],
+      "crop": [
+        0,
+        0,
+        108,
+        94
+      ],
+      "panel": {
+        "path": "assets/panels/32-playing-bowls.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "33-urinate",
+      "name": "urinate",
+      "path": "assets/signs/33-urinate.png",
+      "size": [
+        144,
+        141
+      ],
+      "crop": [
+        0,
+        0,
+        144,
+        141
+      ],
+      "panel": {
+        "path": "assets/panels/33-urinate.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "34-watering-zebras",
+      "name": "watering-zebras",
+      "path": "assets/signs/34-watering-zebras.png",
+      "size": [
+        362,
+        100
+      ],
+      "crop": [
+        0,
+        23,
+        362,
+        76
+      ],
+      "panel": {
+        "path": "assets/panels/34-watering-zebras.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "35-alley",
+      "name": "alley",
+      "path": "assets/signs/35-alley.png",
+      "size": [
+        81,
+        45
+      ],
+      "crop": [
+        0,
+        0,
+        81,
+        45
+      ],
+      "panel": {
+        "path": "assets/panels/35-alley.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "36-fish",
+      "name": "fish",
+      "path": "assets/signs/36-fish.png",
+      "size": [
+        78,
+        82
+      ],
+      "crop": [
+        0,
+        0,
+        78,
+        82
+      ],
+      "panel": {
+        "path": "assets/panels/36-fish.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "37-corpse",
+      "name": "corpse",
+      "path": "assets/signs/37-corpse.png",
+      "size": [
+        182,
+        66
+      ],
+      "crop": [
+        0,
+        0,
+        182,
+        60
+      ],
+      "panel": {
+        "path": "assets/panels/37-corpse.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "38-burning",
+      "name": "burning",
+      "path": "assets/signs/38-burning.png",
+      "size": [
+        358,
+        407
+      ],
+      "crop": [
+        144,
+        143,
+        287,
+        285
+      ],
+      "panel": {
+        "path": "assets/panels/38-burning.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "39-kiosk",
+      "name": "kiosk",
+      "path": "assets/signs/39-kiosk.png",
+      "size": [
+        100,
+        128
+      ],
+      "crop": [
+        0,
+        24,
+        100,
+        124
+      ],
+      "panel": {
+        "path": "assets/panels/39-kiosk.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "40-pole",
+      "name": "pole",
+      "path": "assets/signs/40-pole.png",
+      "size": [
+        66,
+        38
+      ],
+      "crop": [
+        0,
+        0,
+        66,
+        38
+      ],
+      "panel": {
+        "path": "assets/panels/40-pole.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "41-portrayed",
+      "name": "portrayed",
+      "path": "assets/signs/41-portrayed.png",
+      "size": [
+        245,
+        146
+      ],
+      "crop": [
+        24,
+        35,
+        221,
+        144
+      ],
+      "panel": {
+        "path": "assets/panels/41-portrayed.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "42-gods-statues",
+      "name": "gods-statues",
+      "path": "assets/signs/42-gods-statues.png",
+      "size": [
+        87,
+        52
+      ],
+      "crop": [
+        0,
+        0,
+        87,
+        52
+      ],
+      "panel": {
+        "path": "assets/panels/42-gods-statues.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "43-prayers",
+      "name": "prayers",
+      "path": "assets/signs/43-prayers.png",
+      "size": [
+        101,
+        101
+      ],
+      "crop": [
+        0,
+        0,
+        101,
+        101
+      ],
+      "panel": {
+        "path": "assets/panels/43-prayers.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "44-temples",
+      "name": "temples",
+      "path": "assets/signs/44-temples.png",
+      "size": [
+        177,
+        165
+      ],
+      "crop": [
+        11,
+        0,
+        165,
+        124
+      ],
+      "panel": {
+        "path": "assets/panels/44-temples.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "45-Medusa",
+      "name": "medusa",
+      "path": "assets/signs/45-Medusa.png",
+      "size": [
+        157,
+        114
+      ],
+      "crop": [
+        0,
+        0,
+        113,
+        110
+      ],
+      "panel": {
+        "path": "assets/panels/45-Medusa.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "46-worshiper",
+      "name": "worshiper",
+      "path": "assets/signs/46-worshiper.png",
+      "size": [
+        201,
+        55
+      ],
+      "crop": [
+        0,
+        0,
+        201,
+        55
+      ],
+      "panel": {
+        "path": "assets/panels/46-worshiper.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "47-cornucopia",
+      "name": "cornucopia",
+      "path": "assets/signs/47-cornucopia.png",
+      "size": [
+        185,
+        75
+      ],
+      "crop": [
+        0,
+        0,
+        185,
+        65
+      ],
+      "panel": {
+        "path": "assets/panels/47-cornucopia.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "48-hourglass",
+      "name": "hourglass",
+      "path": "assets/signs/48-hourglass.png",
+      "size": [
+        210,
+        54
+      ],
+      "crop": [
+        0,
+        0,
+        210,
+        54
+      ],
+      "panel": {
+        "path": "assets/panels/48-hourglass.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "49-order",
+      "name": "order",
+      "path": "assets/signs/49-order.png",
+      "size": [
+        181,
+        57
+      ],
+      "crop": [
+        0,
+        0,
+        181,
+        57
+      ],
+      "panel": {
+        "path": "assets/panels/49-order.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "50-occupies",
+      "name": "occupies",
+      "path": "assets/signs/50-occupies.png",
+      "size": [
+        152,
+        47
+      ],
+      "crop": [
+        0,
+        0,
+        152,
+        47
+      ],
+      "panel": {
+        "path": "assets/panels/50-occupies.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "51-citys",
+      "name": "citys",
+      "path": "assets/signs/51-citys.png",
+      "size": [
+        118,
+        97
+      ],
+      "crop": [
+        0,
+        0,
+        118,
+        97
+      ],
+      "panel": {
+        "path": "assets/panels/51-citys.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "52-no-signboard",
+      "name": "no-signboard",
+      "path": "assets/signs/52-no-signboard.png",
+      "size": [
+        160,
+        51
+      ],
+      "crop": [
+        0,
+        0,
+        160,
+        51
+      ],
+      "panel": {
+        "path": "assets/panels/52-no-signboard.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "53-figure",
+      "name": "figure",
+      "path": "assets/signs/53-figure.png",
+      "size": [
+        200,
+        55
+      ],
+      "crop": [
+        0,
+        0,
+        200,
+        55
+      ],
+      "panel": {
+        "path": "assets/panels/53-figure.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "54-building",
+      "name": "building",
+      "path": "assets/signs/54-building.png",
+      "size": [
+        146,
+        146
+      ],
+      "crop": [
+        0,
+        0,
+        146,
+        146
+      ],
+      "panel": {
+        "path": "assets/panels/54-building.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "55-form",
+      "name": "form",
+      "path": "assets/signs/55-form.png",
+      "size": [
+        223,
+        54
+      ],
+      "crop": [
+        0,
+        0,
+        223,
+        54
+      ],
+      "panel": {
+        "path": "assets/panels/55-form.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "56-function",
+      "name": "function",
+      "path": "assets/signs/56-function.png",
+      "size": [
+        341,
+        55
+      ],
+      "crop": [
+        0,
+        0,
+        341,
+        55
+      ],
+      "panel": {
+        "path": "assets/panels/56-function.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "57-mint",
+      "name": "mint",
+      "path": "assets/signs/57-mint.png",
+      "size": [
+        106,
+        65
+      ],
+      "crop": [
+        0,
+        0,
+        106,
+        65
+      ],
+      "panel": {
+        "path": "assets/panels/57-mint.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "58-Pythagorean-school",
+      "name": "pythagorean-school",
+      "path": "assets/signs/58-Pythagorean-school.png",
+      "size": [
+        247,
+        92
+      ],
+      "crop": [
+        0,
+        0,
+        247,
+        92
+      ],
+      "panel": {
+        "path": "assets/panels/58-Pythagorean-school.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "59-brothel",
+      "name": "brothel",
+      "path": "assets/signs/59-brothel.png",
+      "size": [
+        161,
+        48
+      ],
+      "crop": [
+        0,
+        4,
+        161,
+        48
+      ],
+      "panel": {
+        "path": "assets/panels/59-brothel.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "60-palace",
+      "name": "palace",
+      "path": "assets/signs/60-palace.png",
+      "size": [
+        174,
+        48
+      ],
+      "crop": [
+        0,
+        1,
+        174,
+        48
+      ],
+      "panel": {
+        "path": "assets/panels/60-palace.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "61-prison",
+      "name": "prison",
+      "path": "assets/signs/61-prison.png",
+      "size": [
+        190,
+        88
+      ],
+      "crop": [
+        0,
+        8,
+        190,
+        83
+      ],
+      "panel": {
+        "path": "assets/panels/61-prison.png",
+        "size": [
+          449,
+          586
+        ],
+        "crop": [
+          2,
+          2,
+          446,
+          584
+        ]
+      }
+    },
+    {
+      "id": "62-exit",
+      "name": "exit",
+      "path": "assets/signs/62-exit.png",
+      "size": [
+        78,
+        31
+      ],
+      "crop": [
+        0,
+        0,
+        78,
+        30
+      ],
+      "panel": null
+    }
+  ],
+  "intro": {
+    "winter": {
+      "path": "assets/intro/winter.png",
+      "size": [
+        247,
+        57
+      ],
+      "crop": [
+        0,
+        0,
+        247,
+        57
+      ]
+    },
+    "eye": {
+      "path": "assets/intro/eye.png",
+      "size": [
+        160,
+        79
+      ],
+      "crop": [
+        5,
+        0,
+        154,
+        79
+      ]
+    },
+    "tiger": {
+      "path": "assets/intro/tiger.png",
+      "size": [
+        149,
+        130
+      ],
+      "crop": [
+        0,
+        0,
+        131,
+        129
+      ]
+    },
+    "tree": {
+      "path": "assets/intro/tree.png",
+      "size": [
+        220,
+        154
+      ],
+      "crop": [
+        0,
+        0,
+        220,
+        154
+      ]
+    },
+    "water": {
+      "path": "assets/intro/water.png",
+      "size": [
+        170,
+        83
+      ],
+      "crop": [
+        0,
+        0,
+        170,
+        83
+      ]
+    },
+    "flower": {
+      "path": "assets/intro/flower.png",
+      "size": [
+        169,
+        77
+      ],
+      "crop": [
+        0,
+        0,
+        169,
+        77
+      ]
+    },
+    "stone": {
+      "path": "assets/intro/stone.png",
+      "size": [
+        269,
+        87
+      ],
+      "crop": [
+        0,
+        0,
+        269,
+        85
+      ]
+    },
+    "marsh": {
+      "path": "assets/intro/marsh.png",
+      "size": [
+        153,
+        54
+      ],
+      "crop": [
+        0,
+        0,
+        153,
+        53
+      ]
+    },
+    "sand": {
+      "path": "assets/intro/sand.png",
+      "size": [
+        184,
+        59
+      ],
+      "crop": [
+        0,
+        0,
+        184,
+        59
+      ]
+    }
+  },
+  "ui": {
+    "categories": {
+      "path": "assets/ui/categories.png",
+      "size": [
+        618,
+        72
+      ],
+      "crop": [
+        0,
+        7,
+        618,
+        67
+      ]
+    },
+    "pegman": {
+      "path": "assets/ui/pegman.png",
+      "size": [
+        62,
+        62
+      ],
+      "crop": [
+        0,
+        0,
+        62,
+        62
+      ]
+    },
+    "walker": {
+      "path": "assets/ui/walker.png",
+      "size": [
+        87,
+        92
+      ],
+      "crop": [
+        12,
+        0,
+        75,
+        89
+      ]
+    },
+    "zoom": {
+      "path": "assets/ui/zoom.png",
+      "size": [
+        62,
+        107
+      ],
+      "crop": [
+        0,
+        0,
+        62,
+        107
+      ]
+    },
+    "route11": {
+      "path": "assets/ui/route11.png",
+      "size": [
+        12,
+        215
+      ],
+      "crop": [
+        0,
+        0,
+        12,
+        215
+      ]
+    },
+    "route10": {
+      "path": "assets/ui/route10.png",
+      "size": [
+        15,
+        290
+      ],
+      "crop": [
+        0,
+        0,
+        15,
+        290
+      ]
+    },
+    "dot": {
+      "path": "assets/ui/dot.png",
+      "size": [
+        26,
+        26
+      ],
+      "crop": [
+        1,
+        0,
+        25,
+        25
+      ]
+    },
+    "destination": {
+      "path": "assets/ui/destination.png",
+      "size": [
+        31,
+        44
+      ],
+      "crop": [
+        2,
+        2,
+        29,
+        39
+      ]
+    },
+    "route8": {
+      "path": "assets/ui/route8.png",
+      "size": [
+        15,
+        813
+      ],
+      "crop": [
+        0,
+        0,
+        15,
+        813
+      ]
+    },
+    "route9": {
+      "path": "assets/ui/route9.png",
+      "size": [
+        4,
+        33
+      ],
+      "crop": [
+        0,
+        0,
+        4,
+        33
+      ]
+    },
+    "track": {
+      "path": "assets/ui/track.png",
+      "size": [
+        53,
+        904
+      ],
+      "crop": [
+        0,
+        0,
+        53,
+        904
+      ]
+    },
+    "location": {
+      "path": "assets/ui/location.png",
+      "size": [
+        34,
+        34
+      ],
+      "crop": [
+        1,
+        0,
+        33,
+        32
+      ]
+    }
+  },
+  "backgrounds": {
+    "windows": "assets/backgrounds/windows.png",
+    "clouds": "assets/backgrounds/clouds.png",
+    "transition": "assets/backgrounds/transition.png"
+  },
+  "idle": {
+    "path": "assets/panels/idle.png",
+    "size": [
+      361,
+      57
+    ],
+    "crop": [
+      0,
+      0,
+      361,
+      57
+    ]
+  }
+}
