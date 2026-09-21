@@ -1,10 +1,7 @@
-/*
- * TAMARA — an interactive reading of Invisible Cities
- * Created by Ashlynn with the assistance of AI.
- */
-
-// AI helped me collect the timings, speeds, and sound levels in one place.
-// Time values are in milliseconds: 1000 ms = 1 second. Volume goes from 0 to 1.
+// AI helped me understand how to keep repeated values in one object.
+// I used this SETTINGS section to make it easier to test and adjust
+// timing, movement speed, and sound levels without changing them
+// throughout the whole sketch.
 const SETTINGS = {
   introLineDelay: 1550,
   introFadeDuration: 1600,
@@ -46,8 +43,7 @@ let leavingLines = [];
 let endingLines = [];
 let endingFontSize = 28;
 
-// These positions follow my desktop layout.
-// Each entry is [horizontal fraction of the reading area, vertical fraction, width].
+// I adjusted these positions to match the layout I wanted on screen.
 const SIGN_POSITIONS = {
   journey: [.355, .23, 196],
   tamara: [.675, .30, 166],
@@ -119,7 +115,7 @@ let introAssets = {};
 let uiAssets = {};
 let idlePanel;
 
-// AI helped me use a scene name to choose what draw() should show.
+// AI showed me how to use a scene variable to control which page is displayed.
 let scene = 'nature';
 let sceneStarted = 0;
 let ready = false;
@@ -133,7 +129,6 @@ let fontSize = 32;
 let lineHeight = 48;
 let cityScale = 1;
 let exitArt;
-// Buttons are data for canvas drawings, not HTML elements.
 let controls = [];
 let focusedControl = '';
 let soundEnabled = false;
@@ -160,12 +155,11 @@ let introTop = 0;
 let introFont = 34;
 let smallScreen = false;
 
-// Change this to true to turn off the gentle floating movement.
+// Change this to true to stop the floating effect.
 const reducedMotion = false;
 
-// AI helped me with this small formula for making motion feel softer.
-// t is a number from 0 to 1. The result also goes from 0 to 1,
-// but changes more slowly near the beginning and end.
+// AI helped me make the movement look smoother.
+// This makes the animation start and end more gently.
 function ease(t) {
   return t * t *(3 - 2 * t);
 }
@@ -174,15 +168,15 @@ let regularFont;
 let thinFont;
 let monoFont;
 
-// If an image, font, or data file cannot load, this remembers the problem.
-// setup() can then show a loading message instead of starting the reading.
+// If an image, font, or file fails to load, keep track of it here.
+// This stops the project from starting before everything is ready.
 function assetFailed() {
   assetError = true;
 }
 
-// AI helped me group each image with its name and crop information.
-// loadImage() is the p5.js function that reads the actual image file.
-// Keeping these details together makes it easier to use the right artwork later.
+// AI helped me keep the image name and crop settings together.
+// loadImage() loads the image file into the project.
+// This makes it easier to use the correct image later.
 function loadArt(data) {
   
   return {
@@ -194,9 +188,10 @@ function loadArt(data) {
   };
 }
 
-// AI helped me understand where to put loadFont(), loadImage(), and loadJSON().
-// p5.js runs preload() before setup(), so it can wait for these files.
-// The fonts and backgrounds are loaded here; loadManifest() handles the signs.
+// AI taught me how preload() works and how to use loadJSON() in p5.js.
+// I also learned how to make a small helper function to organize and load
+// the sign data before the project starts.
+
 function preload() {
   regularFont = loadFont('assets/Inter-Regular.ttf', undefined, assetFailed);
   thinFont = loadFont('assets/Inter-Thin.ttf', undefined, assetFailed);
@@ -207,9 +202,10 @@ function preload() {
   manifest = loadJSON('assets/manifest.json', loadManifest, assetFailed);
 }
 
-// AI helped me read the list in manifest.json and pair each sign with its panel.
-// The for loop repeats the same steps for every sign, instead of loading each one by hand.
-// "at" is the reading progress where a sign first appears: 0 is the start, 1 is the end.
+// This loads the sign information from manifest.json.
+// The loop goes through every sign automatically instead of loading them one by one.
+// "at" controls when each sign appears: 0 is the start and 1 is the end.
+
 function loadManifest(data) {
   for (let i = 0; i < data.signs.length; i++) {
     const item = data.signs[i];
@@ -248,9 +244,10 @@ function loadManifest(data) {
   idlePanel = loadArt(data.idle);
 }
 
-// setup() runs once. AI helped me use createCanvas() for the whole experience.
-// canvas.position(0, 0) is a p5.js function that places it at the top-left of the page.
-// There are no custom HTML buttons or handwritten CSS rules in this version.
+// setup() runs once at the beginning.
+// I use createCanvas() as the main space for the whole project.
+// The canvas starts from the top-left corner of the page.
+
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0, 0);
@@ -272,8 +269,6 @@ function setup() {
 }
 
 // AI helped me use the audio functions included in p5.js itself.
-// createAudio() loads each track, hide() keeps the media player out of view,
-// and volume() sets its loudness. I do not access the underlying HTML audio element.
 function setupAudio() {
   natureSound = createAudio('assets/audio/babbling-brook.mp3');
   natureSound.hide();
@@ -294,7 +289,6 @@ function startNatureSound() {
 }
 
 // This lays out the words and decorative text for the first page.
-// The desktop positions follow my visual layout.
 // AI helped me add a separate small-screen layout so the words can wrap instead of becoming tiny.
 function layoutIntro() {
   introRows = [];
@@ -406,7 +400,6 @@ function layoutIntro() {
 
 // AI helped me use millis() for the fade-in and sin() for the floating movement.
 // millis() tells me how much time has passed; sin() moves smoothly back and forth.
-// Each row starts a little later, and each decorative word has a slightly different rhythm.
 function drawNature() {
   const elapsed = millis() - sceneStarted;
   push();
@@ -418,7 +411,6 @@ function drawNature() {
   for (let i = 0; i < introRows.length; i++) {
     const row = introRows[i];
     
-    // AI helped me stagger the lines. constrain() keeps the fade amount between 0 and 1.
     const alpha = ease(constrain((elapsed - i * SETTINGS.introLineDelay) / SETTINGS.introFadeDuration, 0, 1));
     if (alpha <= 0) {
       continue;
@@ -456,8 +448,8 @@ function drawNature() {
   }
 }
 
-// This switches to the city after the introduction has finished.
-// The river sound stops, the city music starts, and the same canvas keeps drawing.
+// Switches to the city after the introduction has finished.
+// River sound stops, city music starts.
 function enterCity() {
   if (!ready || millis() - sceneStarted < introDuration) {
     return;
@@ -471,8 +463,6 @@ function enterCity() {
 }
 
 // AI helped me work out the text layout and image sizes for different windows.
-// textWidth() measures a line, so a new line can start before the text gets too wide.
-// Each sign also gets a home position, which is where it returns after being dragged.
 function layout() {
   const progress = readingOffset / maxScroll;
   smallScreen = width <= 760;
@@ -532,9 +522,6 @@ function layout() {
   layoutEnding();
 }
 
-// AI helped me use draw() as the main loop: p5.js calls it again for every frame.
-// The scene name chooses the artwork to draw. The controls are drawn on top at the end.
-// The p5.js variable focused lets me stop held input when the reader leaves the window.
 function draw() {
   background(255);
   if (!ready) {
@@ -564,7 +551,6 @@ function draw() {
   drawControls();
 }
 
-// This draws the reading text and the signs that have appeared so far.
 // AI helped me connect the signs to reading progress, rather than to a fixed timer.
 // A sign stays visible once it appears, so the city gradually becomes more crowded.
 function drawCity() {
@@ -606,9 +592,8 @@ function drawCity() {
   pop();
 }
 
-// This adds the map decorations and the search-style panel to the city.
-// AI helped me make the panel follow the same drag distance as the selected sign.
-// The zoom and category graphics are artwork; they are not working map controls.
+// This adds the map details and the search-style panel to the city.
+// AI helped me figure out how to make the panel move together with the selected sign.
 function drawCityUI(progress, alpha) {
   const c = cityScale;
   if (!smallScreen) {
@@ -647,9 +632,8 @@ function drawCityUI(progress, alpha) {
   }
 }
 
-// AI helped me turn reading progress into a position on the route.
-// As progress goes from 0 to 1, the blue marker moves toward the destination.
-// The route is made from my existing images, not a live map.
+// The blue marker moves along the route based on the reading progress.
+// As the reading continues, it gets closer to the destination.
 function drawRoute(progress, alpha) {
   const trackW = constrain(width * .035, 27, 60);
   let margin = width * 0.025;
@@ -676,9 +660,7 @@ function drawRoute(progress, alpha) {
   drawArt(uiAssets.location, cx - locW / 2, markerY - locW / 2, locW, locW, alpha);
 }
 
-// This moves the reading forward, or enters the city from the introduction.
 // AI helped me use constrain() to keep the reading position inside its allowed range.
-// It does nothing while a sign is selected, so the text does not move during a drag.
 function navigate(amount) {
   if (!ready || activeSign) {
     return;
@@ -694,7 +676,6 @@ function navigate(amount) {
   }
 }
 
-// AI helped me handle keyboard input entirely through p5.js.
 // The down arrow moves the reading. Tab chooses a canvas button; Enter activates it.
 // Left/right arrows select visible signs. Escape releases them. M toggles music; R restarts.
 function keyPressed() {
@@ -756,17 +737,13 @@ function keyPressed() {
   }
 }
 
-// p5.js calls this when a key is released.
-// Releasing the down arrow clears keyboardDown, so the reading stops moving.
+// When I release the down arrow, keyboardDown becomes false and the reading stops.
 function keyReleased() {
   if (keyCode === DOWN_ARROW) {
     keyboardDown = false;
   }
 }
 
-// AI helped me use p5.js mouseX and mouseY to check what was clicked.
-// pressAt() checks the canvas buttons first, then the signs underneath.
-// There is no HTML button or browser click listener here.
 function mousePressed() {
   if (mouseButton !== LEFT) {
     return;
@@ -775,15 +752,11 @@ function mousePressed() {
   return false;
 }
 
-// This p5.js callback follows a held mouse button.
-// dragSign() only moves a sign if a mouse or touch drag has selected one.
 function mouseDragged() {
   dragSign(mouseX, mouseY);
   return false;
 }
 
-// Releasing the mouse stops the on-screen down button from advancing the text.
-// It also releases a dragged sign. Keyboard-selected signs stay open until Escape.
 function mouseReleased() {
   heldDown = false;
   if (!keyboardSelection) {
@@ -791,8 +764,6 @@ function mouseReleased() {
   }
 }
 
-// AI helped me use cursor() to show what can be interacted with.
-// Canvas buttons get a pointer cursor, while draggable signs get a grab cursor.
 function mouseMoved() {
   layoutControls();
   if (controlAt(mouseX, mouseY)) {
@@ -835,8 +806,6 @@ function touchMoved() {
   return false;
 }
 
-// This checks whether the finger that started the interaction has been lifted.
-// It stops a held canvas button and releases the sign when that finger is gone.
 function touchEnded() {
   for (let i = 0; i < touches.length; i++) {
     if (touches[i].id === activeTouch) {
@@ -909,7 +878,6 @@ function signAt(x, y) {
   return null;
 }
 
-// This remembers the selected sign and the point where dragging started.
 // AI helped me use splice() and push() to move it to the end of the signs array.
 // Because signs are drawn in order, the selected one is then drawn on top.
 function activateSign(sign, x, y, keyboard = false) {
@@ -925,8 +893,6 @@ function activateSign(sign, x, y, keyboard = false) {
   cursor('grabbing');
 }
 
-// AI helped me save the sign's final offset and release time.
-// The panel disappears immediately; updateReturn() then brings the sign home after a delay.
 function releaseSign() {
   if (activeSign) {
     activeSign.fromDX = activeSign.dx;
@@ -938,9 +904,6 @@ function releaseSign() {
   cursor('default');
 }
 
-// This clears held buttons and any active drag.
-// It is used when restarting, changing scenes, or leaving the browser window,
-// so the sketch does not keep moving after the reader stops interacting.
 function clearInput() {
   heldDown = false;
   keyboardDown = false;
@@ -963,8 +926,7 @@ function updateReturn(s, now) {
   }
 }
 
-// AI helped me reset the scene, sounds, reading position, and sign offsets together.
-// The controls are drawn from the current scene, so there are no HTML elements to hide or reset.
+// AI taught me how to reset the scene, sounds, reading position, and sign offsets together.
 function restartReading() {
   clearInput();
   scene = 'nature';
@@ -987,7 +949,6 @@ function restartReading() {
   focusedControl = '';
 }
 
-// AI helped me use windowResized(), which p5.js calls when the window changes size.
 // resizeCanvas() changes the canvas size; layout() recalculates where everything goes.
 function windowResized() {
   clearInput();
@@ -997,7 +958,6 @@ function windowResized() {
   }
 }
 
-// This is called when the EXIT image on the canvas is clicked.
 // AI helped me stop the city music and start the ending sound and scene timer together.
 function startEnding() {
   if (scene !== 'city' || readingOffset / maxScroll < 0.985) {
@@ -1012,8 +972,6 @@ function startEnding() {
   focusedControl = '';
 }
 
-// This small helper changes the scene and resets its start time.
-// That lets each scene measure its own elapsed time from zero.
 function nextScene(name) {
   scene = name;
   sceneStarted = millis();
@@ -1038,9 +996,6 @@ function layoutEnding() {
   pop();
 }
 
-// AI helped me use textWidth() to decide where a sentence should wrap.
-// The loop adds one word at a time. If the next word would make the line too wide,
-// the current line is saved and a new one begins.
 function wrapEndingText(sentence, maxWidth) {
   const result = [];
   let line = '';
@@ -1066,9 +1021,7 @@ function wrapEndingText(sentence, maxWidth) {
   return result;
 }
 
-// AI helped me connect the boot screen, typing, wallpaper, clouds, and final fade.
-// Each if/else section draws one stage and checks whether it is time to move on.
-// The timing values come from SETTINGS, so I can adjust the pacing in one place.
+// AI helped me adjust the boot screen, typing, wallpaper, clouds, and final fade.
 function drawEnding() {
   const elapsed = millis() - sceneStarted;
   if (scene === 'booting') {
@@ -1175,8 +1128,6 @@ function drawEnding() {
 }
 
 // AI helped me keep a background's proportions while filling the screen.
-// The larger width/height scale is used, so there are no empty edges.
-// Some edges may be cropped on a different screen shape, but the image is not stretched.
 function drawBackground(name, alpha = 1) {
   
   const img = backgrounds[name];
@@ -1190,8 +1141,6 @@ function drawBackground(name, alpha = 1) {
   pop();
 }
 
-// This chooses between the thin city font and the regular introduction font.
-// textFont() selects the font, and textSize() sets its size.
 function setFont(weight, size) {
   if (weight === 100) {
     textFont(thinFont);
@@ -1201,8 +1150,6 @@ function setFont(weight, size) {
   textSize(size);
 }
 
-// AI helped me calculate the image height from its width and original proportions.
-// The crop values describe the part of the image that is actually shown.
 function aspectHeight(art, w) {
   return w *(art.crop[3] - art.crop[1]) /(art.crop[2] - art.crop[0]);
 }
@@ -1244,8 +1191,6 @@ function drawRoutePart(art, x, y, w, h, markerY, last, alpha) {
   pop();
 }
 
-// This returns the sound that belongs to the current reading scene.
-// Returning null during the ending means the normal Sound/Music control is not available.
 function currentMusic() {
   if (scene === 'nature') {
     return natureSound;
@@ -1256,9 +1201,6 @@ function currentMusic() {
   return null;
 }
 
-// Browsers may require a click or key press before allowing sound.
-// AI helped me wait for that first interaction instead of assuming autoplay will work.
-// Once enabled, the scene changes can start their own tracks.
 function allowSound() {
   if (!soundEnabled) {
     soundEnabled = true;
@@ -1266,7 +1208,6 @@ function allowSound() {
   }
 }
 
-// This asks the current p5.js audio object to loop.
 // AI helped me keep the request separate from whether playback has actually started,
 // so the label does not say "on" while the file is still waiting to play.
 function startMusic() {
@@ -1281,8 +1222,6 @@ function startMusic() {
   }
 }
 
-// This is the action behind the Sound/Music canvas button and the M key.
-// It uses p5.js pause() and loop(), rather than an HTML audio control.
 function toggleMusic() {
   const sound = currentMusic();
   if (!sound) {
@@ -1322,9 +1261,6 @@ function updateMusicState() {
   }
 }
 
-// AI helped me represent each canvas button with a simple object.
-// Its x, y, w, and h values describe a rectangle; its id tells me what it does.
-// The list changes with the scene, so only the appropriate controls can be clicked.
 function layoutControls() {
   controls = [];
   if (!ready) {
@@ -1375,9 +1311,6 @@ function layoutControls() {
   pop();
 }
 
-// These controls are drawn with p5.js text(), circle(), line(), rect(), and image().
-// AI helped me give the small-screen controls a pale background so the text stays readable.
-// The blue outline shows which button was selected with Tab. No CSS is used to draw it.
 function drawControls() {
   layoutControls();
   push();
@@ -1455,7 +1388,6 @@ function controlAt(x, y) {
   return null;
 }
 
-// The mouse and touch callbacks both come here.
 // AI helped me check buttons before signs, so pressing a control does not drag artwork behind it.
 // A click elsewhere can enable sound and select a sign.
 function pressAt(x, y) {
@@ -1473,9 +1405,6 @@ function pressAt(x, y) {
   }
 }
 
-// This connects each button id to a simple action.
-// A mouse or finger can hold the down button; Enter moves the reading forward one step.
-// The drawing and the click action are separate, even though both use p5.js.
 function useControl(id, hold) {
   if (id === 'music') {
     toggleMusic();
@@ -1494,9 +1423,6 @@ function useControl(id, hold) {
   }
 }
 
-// AI helped me replace the old HTML dropdown with left/right arrow navigation.
-// This collects visible signs, puts them in reading order, and selects the next one.
-// p5.js describeElement() also provides a short text description of the selection.
 function selectNextSign(direction) {
   if (scene !== 'city') {
     return;
