@@ -1,7 +1,11 @@
-// AI helped me understand how to keep repeated values in one object.
-// I used this SETTINGS section to make it easier to test and adjust
-// timing, movement speed, and sound levels without changing them
-// throughout the whole sketch.
+// AI assistance note:
+// I designed the interaction, visual direction, asset placement, and overall reading flow.
+// I used AI as a coding assistant when I needed help understanding unfamiliar p5.js techniques
+// or debugging specific interactions. The comments below point out the main techniques I learned
+// or adapted with that assistance.
+
+// I keep repeated timing, movement, and sound values in one SETTINGS object
+// so I can test and adjust them without changing values throughout the sketch.
 const SETTINGS = {
   introLineDelay: 1550,
   introFadeDuration: 1600,
@@ -115,7 +119,7 @@ let introAssets = {};
 let uiAssets = {};
 let idlePanel;
 
-// AI showed me how to use a scene variable to control which page is displayed.
+// I use one scene variable to keep track of which part of the experience is currently displayed.
 let scene = 'nature';
 let sceneStarted = 0;
 let ready = false;
@@ -158,8 +162,7 @@ let smallScreen = false;
 // Change this to true to stop the floating effect.
 const reducedMotion = false;
 
-// AI helped me make the movement look smoother.
-// This makes the animation start and end more gently.
+// I use this simple easing formula so movement can start and end more gently.
 function ease(t) {
   return t * t *(3 - 2 * t);
 }
@@ -174,9 +177,8 @@ function assetFailed() {
   assetError = true;
 }
 
-// AI helped me keep the image name and crop settings together.
-// loadImage() loads the image file into the project.
-// This makes it easier to use the correct image later.
+// I keep each image's name, path, crop settings, and loaded image together.
+// loadImage() loads the file so the same artwork data can be reused later.
 function loadArt(data) {
   
   return {
@@ -188,9 +190,9 @@ function loadArt(data) {
   };
 }
 
-// AI taught me how preload() works and how to use loadJSON() in p5.js.
-// I also learned how to make a small helper function to organize and load
-// the sign data before the project starts.
+// I wanted the artwork data to load before the experience starts.
+// AI helped me understand how preload() and loadJSON() work in p5.js,
+// and I adapted that approach to organize the sign assets from manifest.json.
 
 function preload() {
   regularFont = loadFont('assets/Inter-Regular.ttf', undefined, assetFailed);
@@ -215,7 +217,7 @@ function loadManifest(data) {
     }
     
     const sign = loadArt(item);
-    // AI helped me match each sign to the search panel listed beside it in the asset data.
+    // Each sign uses the matching search panel stored beside it in the asset data.
     sign.panel = loadArt(item.panel);
     let rank = APPEAR_ORDER.indexOf(item.name);
     if (item.id === '11.5-walls') {
@@ -268,7 +270,7 @@ function setup() {
   describe('Tamara, an interactive reading. Use the down arrow to read. Drag signs to reveal their associations. Tab selects a control; Enter activates it. Left and right arrows explore visible signs; Escape releases a sign. ' + INTRO + ' ' + PASSAGE + ' ' + LEAVING.slice(3) + ' ' + ENDING_LINES.join(' '));
 }
 
-// AI helped me use the audio functions included in p5.js itself.
+// These audio elements are created in p5.js and reused across the different scenes.
 function setupAudio() {
   natureSound = createAudio('assets/audio/babbling-brook.mp3');
   natureSound.hide();
@@ -289,7 +291,7 @@ function startNatureSound() {
 }
 
 // This lays out the words and decorative text for the first page.
-// AI helped me add a separate small-screen layout so the words can wrap instead of becoming tiny.
+// I made a separate small-screen layout so the words can wrap instead of becoming too small.
 function layoutIntro() {
   introRows = [];
   if (!smallScreen) {
@@ -398,8 +400,9 @@ function layoutIntro() {
   introDuration =(introRows.length - 1) * SETTINGS.introLineDelay + SETTINGS.introFadeDuration;
 }
 
-// AI helped me use millis() for the fade-in and sin() for the floating movement.
-// millis() tells me how much time has passed; sin() moves smoothly back and forth.
+// I wanted the opening to fade in over time and the image-words to drift very slightly.
+// AI helped me understand how millis() can measure elapsed time and how sin() can create
+// a repeated back-and-forth motion; I adjusted the timing and movement for this scene.
 function drawNature() {
   const elapsed = millis() - sceneStarted;
   push();
@@ -462,7 +465,7 @@ function enterCity() {
   focusedControl = '';
 }
 
-// AI helped me work out the text layout and image sizes for different windows.
+// This recalculates the text layout, sign sizes, and positions for the current window size.
 function layout() {
   const progress = readingOffset / maxScroll;
   smallScreen = width <= 760;
@@ -538,7 +541,8 @@ function draw() {
   if (scene === 'nature') {
     drawNature();
   } else if (scene === 'city') {
-    // AI helped me use deltaTime for steady movement. The limit prevents a big jump after a pause.
+    // deltaTime keeps the held-arrow movement more consistent across frame rates.
+    // The limit prevents a large jump if the tab pauses for a moment.
     const seconds = min(deltaTime, 50) / 1000;
     if (!activeSign && (heldDown || keyboardDown)) {
       readingOffset = min(maxScroll, readingOffset + SETTINGS.scrollSpeed * seconds);
@@ -551,7 +555,7 @@ function draw() {
   drawControls();
 }
 
-// AI helped me connect the signs to reading progress, rather than to a fixed timer.
+// I connect each sign to reading progress rather than a fixed timer.
 // A sign stays visible once it appears, so the city gradually becomes more crowded.
 function drawCity() {
   const progress = readingOffset / maxScroll;
@@ -593,7 +597,7 @@ function drawCity() {
 }
 
 // This adds the map details and the search-style panel to the city.
-// AI helped me figure out how to make the panel move together with the selected sign.
+// When a sign is dragged, I use the same drag distance to move its matching panel.
 function drawCityUI(progress, alpha) {
   const c = cityScale;
   if (!smallScreen) {
@@ -660,7 +664,7 @@ function drawRoute(progress, alpha) {
   drawArt(uiAssets.location, cx - locW / 2, markerY - locW / 2, locW, locW, alpha);
 }
 
-// AI helped me use constrain() to keep the reading position inside its allowed range.
+// constrain() keeps the reading position inside its allowed range.
 function navigate(amount) {
   if (!ready || activeSign) {
     return;
@@ -775,8 +779,9 @@ function mouseMoved() {
   }
 }
 
-// AI helped me use p5.js touches to reuse the mouse interaction on a touch screen.
-// One finger controls the interaction. Extra fingers do not take over an existing drag.
+// I wanted the same interaction to still work on a touch screen.
+// AI helped me understand how p5.js touch events could reuse the mouse-based drag logic.
+// One finger controls the interaction, and extra fingers do not take over an existing drag.
 function touchStarted() {
   if (touches.length === 0) {
     return;
@@ -834,9 +839,9 @@ function pressSign(x, y) {
   }
 }
 
-// AI helped me calculate the drag without making the sign jump to the cursor.
-// grabX and grabY remember where inside the sign it was first pressed.
-// dx and dy are how far the sign has moved away from its home position.
+// I want the sign to stay under the exact point where it was grabbed instead of jumping.
+// grabX and grabY remember where inside the sign it was first pressed, while dx and dy
+// record how far the sign has moved away from its home position.
 function dragSign(x, y) {
   if (!activeSign || keyboardSelection) {
     return;
@@ -847,9 +852,10 @@ function dragSign(x, y) {
   activeSign.currentY = activeSign.homeY + activeSign.dy;
 }
 
-// AI helped me with this more complicated part: selecting overlapping images.
-// The loop starts at the last drawn sign, which is visually on top.
-// It also checks pixel transparency, so an empty part of a PNG does not block a sign underneath.
+// Overlapping transparent signs created a selection problem in this scene.
+// AI suggested checking the PNG alpha value, and I adapted that approach here.
+// The loop starts with the last drawn sign, which is visually on top, and ignores
+// transparent pixels so an empty part of a PNG does not block a sign underneath.
 function signAt(x, y) {
   for (let i = signs.length - 1; i >= 0; i--) {
     const s = signs[i];
@@ -870,7 +876,7 @@ function signAt(x, y) {
     const py = floor(sy + v *(ey - sy));
 
     // Each pixel has red, green, blue, and alpha values. The fourth value is transparency.
-    // AI helped me use this to avoid selecting empty areas of a PNG.
+    // Only visible pixels count as part of the draggable sign.
     if (s.img.pixels[(py * s.img.width + px) * 4 + 3] > 24) {
       return s;
     }
@@ -878,8 +884,7 @@ function signAt(x, y) {
   return null;
 }
 
-// AI helped me use splice() and push() to move it to the end of the signs array.
-// Because signs are drawn in order, the selected one is then drawn on top.
+// Moving the selected sign to the end of the array makes it draw on top of the others.
 function activateSign(sign, x, y, keyboard = false) {
   activeSign = sign;
   keyboardSelection = keyboard;
@@ -911,9 +916,9 @@ function clearInput() {
   activeTouch = null;
 }
 
-// AI helped me use lerp() to move a sign back to its original position.
-// lerp(start, end, amount) finds a position between two values.
-// After the short delay, the amount goes from 0 to 1 and the drag offset returns to zero.
+// I wanted a released sign to return gently instead of snapping back.
+// AI helped me understand lerp(), which finds a position between two values.
+// After a short delay, the amount goes from 0 to 1 and the drag offset returns to zero.
 function updateReturn(s, now) {
   if (s === activeSign || s.releasedAt === null) {
     return;
@@ -926,7 +931,7 @@ function updateReturn(s, now) {
   }
 }
 
-// AI taught me how to reset the scene, sounds, reading position, and sign offsets together.
+// Restarting resets the scene, sounds, reading position, and sign offsets together.
 function restartReading() {
   clearInput();
   scene = 'nature';
@@ -958,7 +963,7 @@ function windowResized() {
   }
 }
 
-// AI helped me stop the city music and start the ending sound and scene timer together.
+// Starting the ending also switches the audio and starts a new scene timer.
 function startEnding() {
   if (scene !== 'city' || readingOffset / maxScroll < 0.985) {
     return;
@@ -977,7 +982,7 @@ function nextScene(name) {
   sceneStarted = millis();
 }
 
-// AI helped me lay out the complete sentences before revealing them letter by letter.
+// I lay out the complete sentences before revealing them letter by letter.
 // This keeps words from jumping between lines during the typing effect.
 function layoutEnding() {
   
@@ -1021,14 +1026,16 @@ function wrapEndingText(sentence, maxWidth) {
   return result;
 }
 
-// AI helped me adjust the boot screen, typing, wallpaper, clouds, and final fade.
+// I designed the ending as a sequence of timed scenes: boot screen, typed text, desktop, clouds, and fade.
+// AI helped me understand how to coordinate several timed transitions with millis() and constrain(),
+// and I adjusted the durations and sequence to match the pacing I wanted.
 function drawEnding() {
   const elapsed = millis() - sceneStarted;
   if (scene === 'booting') {
     background(0);
 
     let bootTime;
-    // AI helped me use the music time when playback has started.
+    // Once the music is playing, its playback time keeps the boot transition in sync.
     // If the track has not started, the scene clock still lets the visuals continue.
     if (endingMusic.time() === 0) {
       bootTime = elapsed;
@@ -1108,7 +1115,7 @@ function drawEnding() {
     const allTextVisible =(endingLines.length - 1) * SETTINGS.endingLineDelay + SETTINGS.endingLineFade;
     const fade = constrain((elapsed - allTextVisible - SETTINGS.endingHoldAfterLastLine) / SETTINGS.endingFade, 0, 1);
 
-    // AI helped me make the picture and sound use the same fade amount.
+    // The image and sound use the same fade amount so they disappear together.
     endingMusic.volume(SETTINGS.endingMusicVolume *(1 - ease(fade)));
     if (fade > 0) {
       push();
@@ -1127,7 +1134,7 @@ function drawEnding() {
   }
 }
 
-// AI helped me keep a background's proportions while filling the screen.
+// This fills the screen while keeping the background image's original proportions.
 function drawBackground(name, alpha = 1) {
   
   const img = backgrounds[name];
@@ -1154,9 +1161,9 @@ function aspectHeight(art, w) {
   return w *(art.crop[3] - art.crop[1]) /(art.crop[2] - art.crop[0]);
 }
 
-// AI helped me use the longer version of image(), which can draw a cropped image.
+// I use the longer version of image() to draw only the cropped part of each artwork.
 // x, y, w, and h describe its position and size on the canvas.
-// tint() controls opacity. push() and pop() keep that opacity from affecting other drawings.
+// tint() controls opacity, while push() and pop() keep that opacity from affecting other drawings.
 function drawArt(art, x, y, w, h, alpha = 1) {
   if (!art || !art.img) {
     return;
@@ -1172,9 +1179,10 @@ function drawArt(art, x, y, w, h, alpha = 1) {
   pop();
 }
 
-// AI helped me calculate the cropped part of the route ahead of the blue marker.
-// first and last are fractions of the route image, between 0 and 1.
-// When the marker passes a section, that part of the route is no longer drawn.
+// I wanted the route ahead of the blue marker to get shorter as reading progress increases.
+// AI helped me understand how to convert the marker position into a crop fraction for the image.
+// first and last are fractions between 0 and 1; after the marker passes a section,
+// that part of the route is no longer drawn.
 function drawRoutePart(art, x, y, w, h, markerY, last, alpha) {
   const first = constrain((markerY - y) / h, 0, last);
   if (first >= last) {
@@ -1208,8 +1216,8 @@ function allowSound() {
   }
 }
 
-// AI helped me keep the request separate from whether playback has actually started,
-// so the label does not say "on" while the file is still waiting to play.
+// I keep the playback request separate from confirmed playback so the label does not say
+// "on" while the file is still waiting to play.
 function startMusic() {
   musicRequested = false;
   musicPlaying = false;
@@ -1237,9 +1245,9 @@ function toggleMusic() {
   }
 }
 
-// AI helped me use p5.js time() to check whether the track is moving forward.
-// If the playback time changes, the label can say "on".
-// After a long wait with no progress, the request stops so the reader can try again.
+// p5.js time() lets me check whether the track is actually moving forward.
+// If the playback time changes, the label can say "on". After a long wait with no progress,
+// the request stops so the reader can try again.
 function updateMusicState() {
   const sound = currentMusic();
   if (!sound || !musicRequested) {
@@ -1375,8 +1383,8 @@ function drawControls() {
   pop();
 }
 
-// AI helped me check a button click using its rectangle.
-// The pointer must be between the left/right edges and between the top/bottom edges.
+// A button click is checked against its rectangular bounds.
+// The pointer must be between the left/right edges and the top/bottom edges.
 // The function returns that button, or null if no button was hit.
 function controlAt(x, y) {
   for (let i = controls.length - 1; i >= 0; i--) {
@@ -1388,7 +1396,7 @@ function controlAt(x, y) {
   return null;
 }
 
-// AI helped me check buttons before signs, so pressing a control does not drag artwork behind it.
+// Buttons are checked before signs so pressing a control does not drag artwork behind it.
 // A click elsewhere can enable sound and select a sign.
 function pressAt(x, y) {
   if (!ready || x < 0 || x > width || y < 0 || y > height) {
