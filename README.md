@@ -58,6 +58,24 @@ The reader enters looking for a city.
 
 ---
 
+## Development
+
+The project began with a simple question: how could the experience of reading Tamara become as crowded and mediated as the city Calvino describes?
+
+In my early experiments, I focused mainly on placing signs over the text. As the reader moved through the passage, more signs appeared and gradually interrupted the reading. This made the page feel increasingly crowded, but simply covering the text was not enough. If the reader could just move a sign away, the obstruction disappeared too easily.
+
+I therefore began to think about what should happen when the reader interacts with a sign. Instead of making dragging a way to remove information, I made it produce another layer of interpretation. Holding a sign reveals a search-style panel containing related words and associations. The interaction changed from clearing the page to moving between different systems of meaning.
+
+The visual language also developed alongside this idea. Rather than reconstructing Tamara as a literal city, I used contemporary forms of signage, branding, typography, navigation, and interface language. This allowed the fictional city to connect with familiar systems through which places and objects are already named, categorized, and interpreted for us.
+
+The reading flow was refined through several prototypes. I eventually used the down arrow as the main form of navigation so that moving through the city feels continuous rather than like ordinary webpage scrolling. Signs appear according to reading progress, gradually making the page more difficult to read and creating a growing tension between the original text and the information layered over it.
+
+The ending developed as a contrast to this density. After leaving Tamara, the interface disappears and the reader reaches the open sky from Calvino’s final lines. Yet even without signs, the traveller immediately begins recognizing a sailing ship, a hand, and an elephant in the clouds. For me, this became an important final step: leaving the city does not necessarily mean leaving the habit of interpretation behind.
+
+Through testing and revision, the project shifted from a visual representation of Tamara into an interaction about the act of reading Tamara itself.
+
+---
+
 ## Interaction
 
 * Hold the **↓ arrow** to move through the reading.
