@@ -76,6 +76,14 @@ Through testing and revision, the project shifted from a visual representation o
 
 ---
 
+## Reflection
+
+Looking back at the final project, I think the main idea came through, but some parts of the visual system could have been more consistent. If I continued developing it, I would push the interface further toward a map or navigation interface so that the route, signs, search panel, and soundtrack feel more connected. I also think some of the transitions are too abrupt, especially when entering and leaving Tamara. A more gradual shift could make the experience feel less like moving between separate screens and more like entering and exiting a system of signs.
+
+I would also develop the Windows-style background and the ending further. The background was intended to suggest a familiar digital environment and become part of the project’s meaning, but in the final version this idea is not communicated strongly enough. Similarly, I like the contrast of ending with an open sky, but the final moment feels slightly rushed. If I had more time, I would slow down this section and make the act of recognizing shapes in the clouds more interactive, so that the ending more clearly suggests that even after leaving Tamara, the habit of interpreting signs remains.
+
+---
+
 ## Interaction
 
 * Hold the **↓ arrow** to move through the reading.
