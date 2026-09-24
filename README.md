@@ -114,6 +114,6 @@ In this sense, the city is being “read” twice: first as a map, then as sound
 
 The project is built entirely in **p5.js**.
 
-I designed the interaction, visual direction, asset system, reading flow, and conceptual framing. I used AI as a coding assistant when learning unfamiliar p5.js techniques and debugging specific interactions, including timing, responsive layouts, image hit detection, audio behaviour, and animation.
+I designed the interaction, visual direction, asset system, reading flow, and conceptual framing. With the help of Codex, I learned unfamiliar p5.js techniques and debugged specific interactions, including timing, responsive layouts, image hit detection, audio behaviour, and animation.
 
-The project was developed through iterative testing and adjustment rather than generated as a complete system.
+All sections of the code developed with AI assistance are **clearly annotated within the source code**. The project was developed through iterative testing, adjustment, and my own design decisions rather than generated as a complete system.
